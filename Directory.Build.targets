@@ -1,0 +1,17 @@
+<Project>
+  <Target Name="AuthenticodeSignBuildOutput" AfterTargets="AfterBuild" Condition="'$(OS)' == 'Windows_NT'">
+    <PropertyGroup>
+      <SignScriptPath>$(MSBuildThisFileDirectory)scripts\sign-output.ps1</SignScriptPath>
+      <PowerShellExe Condition="'$(PowerShellExe)' == ''">powershell.exe</PowerShellExe>
+    </PropertyGroup>
+    <ItemGroup>
+      <_SignFiles Include="$(TargetPath)" Condition="Exists('$(TargetPath)')" />
+      <_SignFiles Include="$(TargetDir)$(TargetName).exe" Condition="Exists('$(TargetDir)$(TargetName).exe')" />
+    </ItemGroup>
+    <Exec Command="$(PowerShellExe) -NoProfile -ExecutionPolicy Bypass -File &quot;$(SignScriptPath)&quot; &quot;@(_SignFiles, '&quot; &quot;')&quot;"
+          Condition="Exists('$(SignScriptPath)') and '@(_SignFiles)' != ''"
+          ContinueOnError="true"
+          StandardOutputImportance="low" />
+  </Target>
+</Project>
+

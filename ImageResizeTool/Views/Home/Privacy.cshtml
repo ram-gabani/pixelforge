@@ -1,0 +1,519 @@
+@{
+    ViewData["Title"] = "Legal & Privacy Center";
+}
+
+<div class="container py-4 max-w-960">
+    <!-- Header Banner -->
+    <div class="text-center mb-4">
+        <div class="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill bg-primary-subtle text-primary border border-primary-subtle small fw-semibold mb-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="m9 12 2 2 4-4"/>
+            </svg>
+            <span>Legal Compliance &amp; Transparency Center</span>
+        </div>
+        <h1 class="fw-bold display-6 mb-2 hero-title">Privacy Policy &amp; Terms of Service</h1>
+        <p class="text-secondary mb-0">Effective Date: January 1, 2026 &bull; Last Revised: September 2026</p>
+    </div>
+
+    <!-- Quick Navigation Tabs -->
+    <div class="card card-custom shadow-xs mb-4">
+        <div class="card-body p-2 p-md-3">
+            <ul class="nav nav-pills nav-fill gap-2" id="legalTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active legal-nav-pill d-flex align-items-center justify-content-center gap-2" 
+                            id="privacy-tab" 
+                            data-bs-toggle="tab" 
+                            data-bs-target="#privacy-content" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="privacy-content" 
+                            aria-selected="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        <span>Privacy Policy</span>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link legal-nav-pill d-flex align-items-center justify-content-center gap-2" 
+                            id="terms-tab" 
+                            data-bs-toggle="tab" 
+                            data-bs-target="#terms-content" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="terms-content" 
+                            aria-selected="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                        <span>Terms &amp; Conditions</span>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link legal-nav-pill d-flex align-items-center justify-content-center gap-2" 
+                            id="security-tab" 
+                            data-bs-toggle="tab" 
+                            data-bs-target="#security-content" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="security-content" 
+                            aria-selected="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                            <line x1="6" y1="6" x2="6.01" y2="6"/>
+                            <line x1="6" y1="18" x2="6.01" y2="18"/>
+                        </svg>
+                        <span>Security &amp; Architecture</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Tab Contents -->
+    <div class="tab-content" id="legalTabContent">
+        
+        <!-- =========================================================================
+             TAB 1: PRIVACY POLICY
+             ========================================================================= -->
+        <div class="tab-pane fade show active" id="privacy-content" role="tabpanel" aria-labelledby="privacy-tab">
+            <div class="legal-card p-4 p-md-5 mb-4">
+                
+                <div class="legal-section-header">
+                    <h2 class="h3 fw-bold mb-1">Privacy Policy</h2>
+                    <p class="text-secondary mb-0">
+                        At ImageResizeTool, user privacy is fundamental to our service design. We process your images in real time without storing, analyzing, or sharing your personal media.
+                    </p>
+                </div>
+
+                <!-- Callout Box: Zero Storage Summary -->
+                <div class="legal-callout legal-callout-success mb-4">
+                    <div class="d-flex align-items-start gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-success flex-shrink-0 mt-0.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="m9 12 2 2 4-4"/>
+                        </svg>
+                        <div>
+                            <strong class="d-block mb-1 text-success-emphasis">Core Privacy Guarantee: Zero Permanent Storage</strong>
+                            <p class="mb-0 small text-body">
+                                Your image files are handled exclusively inside temporary server memory (RAM) while being processed. We do not save your images to hard drives, databases, or cloud storage, and we never use your photos to train AI models.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 1 -->
+                <div class="legal-clause">
+                    <h3 class="legal-clause-title">
+                        <span class="badge bg-primary text-white rounded-pill px-2.5 py-1">1</span>
+                        <span>How We Process Your Images</span>
+                    </h3>
+                    <p class="text-body">
+                        When you upload an image for resizing or compression, our system executes a temporary, in-memory pipeline. We guarantee the following core privacy standards:
+                    </p>
+                    <ul class="legal-point-list success-dots text-body">
+                        <li>
+                            <strong>Volatile RAM Processing:</strong> Images reside in system memory only for the brief duration required to complete your transformation request.
+                        </li>
+                        <li>
+                            <strong>Instant Data Purging:</strong> Once the processed file is streamed to your browser, all related memory buffers are automatically wiped and freed.
+                        </li>
+                        <li>
+                            <strong>No Permanent Storage:</strong> We do not write, archive, or cache your visual media to server hard drives, SSDs, databases, or cloud buckets.
+                        </li>
+                        <li>
+                            <strong>No AI or Machine Learning Training:</strong> Your images are never analyzed, indexed, or utilized to train artificial intelligence or computer vision algorithms.
+                        </li>
+                        <li>
+                            <strong>No Sale or Sharing:</strong> We do not sell, rent, monetize, or disclose your pictures or metadata to advertisers, data brokers, or third parties.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="legal-clause">
+                    <h3 class="legal-clause-title">
+                        <span class="badge bg-primary text-white rounded-pill px-2.5 py-1">2</span>
+                        <span>Information We Collect</span>
+                    </h3>
+                    <p class="text-body">
+                        We adhere to a strict data minimization approach and only interact with the minimal technical data required to operate the tool:
+                    </p>
+                    <ul class="legal-point-list text-body">
+                        <li>
+                            <strong>Uploaded Image Payloads:</strong> Image binary data transmitted to perform resizing or compression, discarded immediately upon response delivery.
+                        </li>
+                        <li>
+                            <strong>Transient HTTP Headers:</strong> Standard technical details (such as IP address and browser User-Agent) used solely in real-time for DDoS mitigation, rate limiting, and server health.
+                        </li>
+                        <li>
+                            <strong>Local Browser Storage:</strong> Your interface preference (Light or Dark theme) is stored only within your local web browser's <code>localStorage</code> and is never sent to our servers.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="legal-clause">
+                    <h3 class="legal-clause-title">
+                        <span class="badge bg-primary text-white rounded-pill px-2.5 py-1">3</span>
+                        <span>Legal Basis for Processing (GDPR)</span>
+                    </h3>
+                    <p class="text-body">
+                        For users in the European Union (EU) and United Kingdom (UK), data handling is conducted under lawful bases defined by GDPR Article 6:
+                    </p>
+                    <ul class="legal-point-list text-body">
+                        <li>
+                            <strong>Contractual Necessity (Article 6(1)(b)):</strong> Processing the image stream as explicitly requested when you choose to resize or compress an image.
+                        </li>
+                        <li>
+                            <strong>Legitimate Interest (Article 6(1)(f)):</strong> Maintaining server stability, preventing abusive traffic spikes, and defending against cybersecurity threats.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 4 -->
+                <div class="legal-clause">
+                    <h3 class="legal-clause-title">
+                        <span class="badge bg-primary text-white rounded-pill px-2.5 py-1">4</span>
+                        <span>Your Privacy &amp; Data Rights</span>
+                    </h3>
+                    <p class="text-body">
+                        We respect global data protection standards, including the GDPR (EU/UK) and California Consumer Privacy Act (CCPA/CPRA):
+                    </p>
+                    <ul class="legal-point-list text-body">
+                        <li>
+                            <strong>Right to Erasure &amp; Deletion:</strong> Fulfilled by design since no image files or personal records are retained after processing.
+                        </li>
+                        <li>
+                            <strong>Right to Access &amp; Portability:</strong> Processed files are immediately provided for direct download in standard open image formats.
+                        </li>
+                        <li>
+                            <strong>Do Not Sell My Info:</strong> We do not sell, rent, or share personal data with any third party.
+                        </li>
+                        <li>
+                            <strong>Right to Non-Discrimination:</strong> All users receive full, uncompromised access to our tools regardless of privacy choices.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 5 -->
+                <div class="legal-clause">
+                    <h3 class="legal-clause-title">
+                        <span class="badge bg-primary text-white rounded-pill px-2.5 py-1">5</span>
+                        <span>Security &amp; Encryption Safeguards</span>
+                    </h3>
+                    <p class="text-body">
+                        We apply strong security practices to protect your information during transmission:
+                    </p>
+                    <ul class="legal-point-list text-body">
+                        <li>
+                            <strong>HTTPS Transport Security:</strong> All data exchanged between your browser and our servers is encrypted in transit using HTTPS (TLS protocol version is negotiated based on host and reverse proxy configuration).
+                        </li>
+                        <li>
+                            <strong>Strict Memory Limits:</strong> Uploads are capped at a maximum of 20 MB and dimensions up to 10,000 × 10,000 pixels to prevent memory overflows.
+                        </li>
+                        <li>
+                            <strong>Automatic Memory Disposal:</strong> Server-side memory streams are wrapped in managed scopes and released promptly to the .NET Garbage Collector.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 6 -->
+                <div class="legal-clause">
+                    <h3 class="legal-clause-title">
+                        <span class="badge bg-primary text-white rounded-pill px-2.5 py-1">6</span>
+                        <span>Children's Privacy Protection</span>
+                    </h3>
+                    <p class="text-body">
+                        ImageResizeTool is a general productivity tool not intended for children under 13 years of age (or under 16 in the EEA). We do not knowingly solicit or collect personal data from minors.
+                    </p>
+                </div>
+
+                <!-- Section 7 -->
+                <div class="legal-clause mb-0">
+                    <h3 class="legal-clause-title">
+                        <span class="badge bg-primary text-white rounded-pill px-2.5 py-1">7</span>
+                        <span>Policy Updates &amp; Revisions</span>
+                    </h3>
+                    <p class="text-body mb-2">
+                        ImageResizeTool operates as a fully self-contained, client-driven image processing utility without user accounts, tracking cookies, or personal profiling.
+                    </p>
+                    <ul class="legal-point-list text-body mb-0">
+                        <li>
+                            <strong>Periodic Revisions:</strong> We may update this Privacy Policy periodically to reflect infrastructure enhancements or regulatory updates.
+                        </li>
+                        <li>
+                            <strong>Transparent Revision Date:</strong> All revisions will be posted directly to this page with an updated "Last Revised" timestamp at the top.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- =========================================================================
+             TAB 2: TERMS AND CONDITIONS
+             ========================================================================= -->
+        <div class="tab-pane fade" id="terms-content" role="tabpanel" aria-labelledby="terms-tab">
+            <div class="legal-card p-4 p-md-5 mb-4">
+                
+                <div class="legal-section-header">
+                    <h2 class="h3 fw-bold mb-1">Terms &amp; Conditions</h2>
+                    <p class="text-secondary mb-0">
+                        Please review these clear terms governing your access to and use of ImageResizeTool.
+                    </p>
+                </div>
+
+                <!-- Section 1 -->
+                <div class="legal-clause">
+                    <h3 class="legal-clause-title">
+                        <span class="badge bg-primary text-white rounded-pill px-2.5 py-1">1</span>
+                        <span>Acceptance of Terms</span>
+                    </h3>
+                    <p class="text-body">
+                        By accessing, visiting, or uploading media to ImageResizeTool, you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these terms, please discontinue using the service immediately.
+                    </p>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="legal-clause">
+                    <h3 class="legal-clause-title">
+                        <span class="badge bg-primary text-white rounded-pill px-2.5 py-1">2</span>
+                        <span>100% User Ownership &amp; Copyright</span>
+                    </h3>
+                    <p class="text-body">
+                        We respect your intellectual property rights and make the following clear guarantees:
+                    </p>
+                    <ul class="legal-point-list success-dots text-body">
+                        <li>
+                            <strong>You Retain All Rights:</strong> You retain complete, unrestricted ownership, copyright, and title to all images you upload or process through the tool.
+                        </li>
+                        <li>
+                            <strong>No License Claimed:</strong> ImageResizeTool does not claim any ownership, copyright, or commercial licensing rights over your submitted or processed photos.
+                        </li>
+                        <li>
+                            <strong>Royalty-Free Output:</strong> You are free to publish, distribute, print, or commercialize your resized images without attribution, fees, or royalties.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="legal-clause">
+                    <h3 class="legal-clause-title">
+                        <span class="badge bg-primary text-white rounded-pill px-2.5 py-1">3</span>
+                        <span>Acceptable Use Rules</span>
+                    </h3>
+                    <p class="text-body">
+                        You agree to use ImageResizeTool exclusively for lawful purposes. You must not use the service to:
+                    </p>
+                    <ul class="legal-point-list text-body">
+                        <li>
+                            Upload Child Sexual Abuse Material (CSAM), non-consensual sexual content, or violent extremist imagery (violations are reported to law enforcement).
+                        </li>
+                        <li>
+                            Upload files containing malware, viruses, trojans, polyglot payloads, or executable scripts.
+                        </li>
+                        <li>
+                            Process copyrighted content that you do not hold valid rights or permissions to modify.
+                        </li>
+                        <li>
+                            Deploy automated scraping bots, high-concurrency flood scripts, or denial-of-service (DDoS) attacks against our infrastructure.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 4 -->
+                <div class="legal-clause">
+                    <h3 class="legal-clause-title">
+                        <span class="badge bg-primary text-white rounded-pill px-2.5 py-1">4</span>
+                        <span>Service Availability &amp; Disclaimers</span>
+                    </h3>
+                    <p class="text-body">
+                        The service is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis without warranties of any kind, whether express or implied:
+                    </p>
+                    <ul class="legal-point-list text-body">
+                        <li>
+                            We strive for high uptime and processing speed, but do not guarantee uninterrupted or error-free service availability.
+                        </li>
+                        <li>
+                            We do not warrant that output images will meet every specific color gamut or printing specification without user verification.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 5 -->
+                <div class="legal-clause">
+                    <h3 class="legal-clause-title">
+                        <span class="badge bg-primary text-white rounded-pill px-2.5 py-1">5</span>
+                        <span>Limitation of Liability</span>
+                    </h3>
+                    <p class="text-body">
+                        To the maximum extent permitted by law, ImageResizeTool and its operators shall not be liable for any indirect, incidental, or consequential damages resulting from your use of the service or any loss of data during transmission. Users are advised to retain original local backups of all image files before processing.
+                    </p>
+                </div>
+
+                <!-- Section 6 -->
+                <div class="legal-clause mb-0">
+                    <h3 class="legal-clause-title">
+                        <span class="badge bg-primary text-white rounded-pill px-2.5 py-1">6</span>
+                        <span>Governing Law &amp; Updates</span>
+                    </h3>
+                    <p class="text-body mb-2">
+                        These terms shall be governed by applicable legal standards without regard to conflict of law rules. We reserve the right to update these terms periodically, with updates reflected by the "Last Revised" date at the top of this page.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- =========================================================================
+             TAB 3: IN-MEMORY SECURITY & ARCHITECTURE
+             ========================================================================= -->
+        <div class="tab-pane fade" id="security-content" role="tabpanel" aria-labelledby="security-tab">
+            <div class="legal-card p-4 p-md-5 mb-4">
+                
+                <div class="legal-section-header">
+                    <h2 class="h3 fw-bold mb-1">Security &amp; In-Memory Architecture</h2>
+                    <p class="text-secondary mb-0">
+                        A transparent technical breakdown of our Privacy-by-Design image processing pipeline.
+                    </p>
+                </div>
+
+                <p class="text-body mb-4">
+                    ImageResizeTool is engineered from the ground up to ensure that your private photos never touch permanent storage drives:
+                </p>
+
+                <!-- 4 Steps -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <div class="legal-item-box h-100">
+                            <div class="legal-item-title">
+                                <span class="badge bg-primary text-white rounded-circle px-2 py-1 small">1</span>
+                                <span>Encrypted Transmission</span>
+                            </div>
+                            <p class="small text-secondary mb-0">
+                                Your image travels securely over HTTPS. The incoming request stream is validated for allowed MIME types and a strict 20 MB size limit before processing begins.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="legal-item-box h-100">
+                            <div class="legal-item-title">
+                                <span class="badge bg-primary text-white rounded-circle px-2 py-1 small">2</span>
+                                <span>In-Memory RAM Execution</span>
+                            </div>
+                            <p class="small text-secondary mb-0">
+                                The image is decoded into a volatile memory stream using SkiaSharp. All resizing and compression calculations occur purely in RAM without writing temporary files to disk.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="legal-item-box h-100">
+                            <div class="legal-item-title">
+                                <span class="badge bg-primary text-white rounded-circle px-2 py-1 small">3</span>
+                                <span>Direct Response Stream</span>
+                            </div>
+                            <p class="small text-secondary mb-0">
+                                The resulting image is streamed directly into the client's HTTP response pipe, making the transformed image immediately available for download in your browser.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="legal-item-box h-100">
+                            <div class="legal-item-title">
+                                <span class="badge bg-primary text-white rounded-circle px-2 py-1 small">4</span>
+                                <span>Immediate Memory Disposal</span>
+                            </div>
+                            <p class="small text-secondary mb-0">
+                                Memory streams are enclosed within managed C# <code>using</code> blocks. As soon as the HTTP connection closes, memory buffers are disposed and reclaimed by the .NET Garbage Collector.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="h5 fw-bold text-body mb-3">Architectural Guarantees:</h4>
+                <ul class="legal-point-list success-dots text-body mb-0">
+                    <li>
+                        <strong>Zero Disk Footprint:</strong> No temporary cache folders, no scratch files, and no cloud database storage.
+                    </li>
+                    <li>
+                        <strong>No Visual Logging:</strong> Server diagnostics record only standard HTTP status codes and response times. Image pixel matrices are never written to logs.
+                    </li>
+                    <li>
+                        <strong>Local Preview Autonomy:</strong> In-browser previews use native <code>URL.createObjectURL()</code> pointers that are automatically revoked when new files are selected.
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom Actions / Links -->
+    <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3 p-3 rounded-3 bg-subtle border">
+        <div class="d-flex align-items-center gap-2 text-secondary small">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary flex-shrink-0">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="m9 12 2 2 4-4"/>
+            </svg>
+            <span>ImageResizeTool &bull; Fast in-memory image processing with zero user tracking or persistent data storage.</span>
+        </div>
+        <div>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-sm btn-primary rounded-pill px-3 py-1.5 fw-semibold text-nowrap">
+                Back to Image Editor
+            </a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Handle hash navigation across tabs (e.g., #privacy, #terms, or #security)
+        function activateTabFromHash() {
+            const rawHash = (window.location.hash || "").toLowerCase();
+            if (!rawHash) return;
+
+            let tabId = null;
+            if (rawHash.includes("terms")) {
+                tabId = "terms-tab";
+            } else if (rawHash.includes("security")) {
+                tabId = "security-tab";
+            } else if (rawHash.includes("privacy")) {
+                tabId = "privacy-tab";
+            }
+
+            if (tabId) {
+                const tabBtn = document.getElementById(tabId);
+                if (tabBtn && typeof bootstrap !== "undefined" && bootstrap.Tab) {
+                    const tabInstance = bootstrap.Tab.getOrCreateInstance(tabBtn);
+                    tabInstance.show();
+                    
+                    // Smooth scroll to top of card
+                    const legalContainer = document.getElementById("legalTabs");
+                    if (legalContainer) {
+                        legalContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
+                }
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            activateTabFromHash();
+            window.addEventListener("hashchange", activateTabFromHash);
+
+            // Handle in-page hash links (e.g. footer links)
+            document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+                anchor.addEventListener("click", () => {
+                    setTimeout(activateTabFromHash, 50);
+                });
+            });
+        });
+    </script>
+}
+

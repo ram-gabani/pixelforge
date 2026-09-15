@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@(ViewData["Title"]?.ToString()?.Contains("PixelForge") == true ? ViewData["Title"] : $"{ViewData["Title"]} - PixelForge")</title>
+    <meta name="description" content="PixelForge — Fast, private image resizing and compression. Resize. Compress. Keep your pixels." />
+    <link rel="icon" type="image/svg+xml" href="~/images/logo-icon.svg" />
+    <link rel="alternate icon" href="~/favicon.ico" />
+    <!-- Prevent theme flash before CSS renders (external script satisfies strict CSP without unsafe-inline) -->
+    <script src="~/js/theme-init.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PixelForge.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="app-body">
+    <header class="app-header sticky-top">
+        <nav class="navbar navbar-expand-md border-bottom shadow-xs app-navbar">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logo-icon.svg" alt="PixelForge Logo" width="28" height="28" class="brand-logo-img rounded-2 shadow-xs" />
+                    <span class="brand-text">Pixel<span class="brand-text-accent">Forge</span></span>
+                </a>
+                
+                <div class="d-flex align-items-center gap-2 order-md-3 ms-auto ms-md-0">
+                    <!-- Animated Dark/Light Mode Switcher Button -->
+                    <button type="button" 
+                            id="themeToggleBtn" 
+                            class="theme-toggle-btn btn btn-sm rounded-pill d-inline-flex align-items-center justify-content-center" 
+                            aria-label="Toggle theme mode" 
+                            title="Toggle Light / Dark theme">
+                        <span class="theme-toggle-track">
+                            <span class="theme-toggle-thumb">
+                                <span class="theme-icon-sun">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="5"></circle>
+                                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                    </svg>
+                                </span>
+                                <span class="theme-icon-moon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                </span>
+                            </span>
+                        </span>
+                    </button>
+
+                    <button class="navbar-toggler border-0 shadow-none p-1.5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div class="navbar-collapse collapse order-md-2" id="navbarMain">
+                    <ul class="navbar-nav ms-auto align-items-md-center gap-1 gap-md-2 mt-2 mt-md-0 me-md-2">
+                        <li class="nav-item">
+                            <a class="nav-link px-2.5 py-1.5 fw-semibold @(ViewContext.RouteData.Values["Action"]?.ToString() == "Index" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">Editor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-2.5 py-1.5 fw-semibold @(ViewContext.RouteData.Values["Action"]?.ToString() == "Privacy" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Privacy">Legal &amp; Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-wrapper">
+        <main role="main" class="pb-5 pt-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="app-footer border-top py-4 mt-auto">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 text-secondary small">
+                <div class="d-flex align-items-center gap-2">
+                    <img src="~/images/logo-icon.svg" alt="PixelForge Logo" width="20" height="20" class="rounded-1 opacity-75" />
+                    <span class="fw-semibold text-body">PixelForge</span>
+                    <span>&copy; 2026. Fast in-memory processing &bull; Zero permanent storage.</span>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <a asp-area="" asp-controller="Home" asp-action="Privacy" asp-fragment="privacy" class="text-decoration-none text-secondary hover-primary">Privacy Policy</a>
+                    <span class="text-muted">&bull;</span>
+                    <a asp-area="" asp-controller="Home" asp-action="Privacy" asp-fragment="terms" class="text-decoration-none text-secondary hover-primary">Terms &amp; Conditions</a>
+                    <span class="text-muted">&bull;</span>
+                    <a asp-area="" asp-controller="Home" asp-action="Privacy" asp-fragment="security" class="text-decoration-none text-secondary hover-primary">Security Architecture</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <linearGradient id="pfCyanViolet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#4facfe" />
+      <stop offset="100%" stop-color="#7f00ff" />
+    </linearGradient>
+    <linearGradient id="pfGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38ef7d" />
+      <stop offset="100%" stop-color="#11998e" />
+    </linearGradient>
+    <linearGradient id="pfDarkFace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="pfAperture" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <filter id="pfDropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#4f46e5" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Hexagonal Rounded Badge Background -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#pfDarkFace)" stroke="url(#pfCyanViolet)" stroke-width="1.5" filter="url(#pfDropShadow)" />
+
+  <!-- Isometric Pixel Grid Elements (Left Side) -->
+  <!-- Top Cube Tile -->
+  <polygon points="20,13 28,9 36,13 28,17" fill="#38bdf8" opacity="0.9" />
+  <polygon points="20,13 28,17 28,26 20,22" fill="#0284c7" opacity="0.95" />
+  <polygon points="28,17 36,13 36,22 28,26" fill="#0369a1" opacity="0.9" />
+
+  <!-- Left Pixel Block -->
+  <polygon points="13,24 19,20 19,30 13,34" fill="#818cf8" opacity="0.85" />
+  <polygon points="13,36 19,32 19,42 13,46" fill="#6366f1" opacity="0.9" />
+
+  <!-- Aperture Blades Curved Segments (Right Side) -->
+  <path d="M34 14 C44 14 51 21 51 31" stroke="url(#pfCyanViolet)" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.9" />
+  <path d="M51 31 C51 41 44 49 34 50" stroke="url(#pfAperture)" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.85" />
+  <path d="M34 50 C24 50 18 44 16 37" stroke="url(#pfAperture)" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.75" />
+
+  <!-- Shutter Iris Internal Facets -->
+  <polygon points="32,22 42,20 40,30 31,27" fill="#6366f1" opacity="0.5" />
+  <polygon points="40,30 46,38 37,42 34,33" fill="#8b5cf6" opacity="0.55" />
+  <polygon points="34,33 37,44 26,44 28,34" fill="#a855f7" opacity="0.5" />
+
+  <!-- Central Forge Anvil Silhouette with Glowing Core Spark -->
+  <path d="M23 37 H41 C42.5 37 43 38.5 42 39.5 L39 42 C37.5 43.5 37.5 45.5 39 47 H25 C26.5 45.5 26.5 43.5 25 42 L22 39.5 C21 38.5 21.5 37 23 37 Z" fill="#0f172a" stroke="url(#pfCyanViolet)" stroke-width="1.8" />
+
+  <!-- Central Forge Spark / Flash -->
+  <polygon points="32,25 34,31 40,32 35,35 37,41 32,37 27,41 29,35 24,32 30,31" fill="#00f2fe" />
+  <circle cx="32" cy="33" r="2.5" fill="#ffffff" />
+</svg>
+
